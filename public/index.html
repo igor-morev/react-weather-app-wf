@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Погодное приложение</title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+	<style>
+		.main {
+			padding-top: 100px;
+		}
+
+		.main .item:nth-child(3n + 1) {
+			clear: left;
+		}
+	</style>
+	<div id="weather-app" class="container main">
+		
+	</div>
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+	<script src="js/react/react.js"></script>
+	<script src="js/react/react-dom.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+  </head>
+	<script type="text/babel" src="js/main.js"></script>
+</body>
+</html>
