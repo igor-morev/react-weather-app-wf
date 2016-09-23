@@ -1,7 +1,12 @@
 (function() {
-	var arr = [];
-	var localTowns = JSON.parse(localStorage["towns"]);
-	arr = localTowns;
+	if (localStorage["towns"]) {
+		var arr = [];
+		var localTowns = JSON.parse(localStorage["towns"]);
+		arr = localTowns;
+	} else {
+		var arr = [];
+		localTowns = [];
+	}
 
 
 	var WeatherApp = React.createClass({
@@ -64,6 +69,7 @@
 				dataType: 'json',
 				cache: false,
 				success: function(data) {
+					console.log(data);
 					this.setState({
 						apiTown: {
 							id: data.city.id,
